@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="NetHafsahu melayani pemasangan jaringan internet, Starlink, CCTV, konfigurasi MikroTik, RT/RW Net, kabel LAN dan fiber optik di Angsana, Tanah Bumbu, Kalimantan Selatan.">
+  <meta name="keywords" content="jasa pasang WiFi Angsana, instalasi Starlink Tanah Bumbu, pasang CCTV, setting MikroTik, RT RW Net, kabel LAN, fiber optik">
+  <meta name="theme-color" content="#0b1f38">
+  <title>NetHafsahu | Jaringan Internet, Starlink, CCTV & MikroTik</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#0b1f38;--navy2:#123456;--cyan:#20d3f2;--blue:#1677ff;--green:#20c875;--ink:#17283d;--muted:#65758a;--paper:#f5f8fc;--white:#fff;--line:#e1e8f0;--shadow:0 18px 50px rgba(10,31,56,.10)}
+    *{box-sizing:border-box;margin:0;padding:0;scroll-behavior:smooth}
+    body{font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif;color:var(--ink);line-height:1.65;background:#fff}
+    a{color:inherit;text-decoration:none}button,input,select,textarea{font:inherit}
+    img{max-width:100%;display:block}
+    .container{width:min(1160px,calc(100% - 40px));margin-inline:auto}
+    .topbar{background:#071729;color:#dce8f5;font-size:.84rem;padding:8px 0}
+    .topbar .container{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+    header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.95);backdrop-filter:blur(14px);border-bottom:1px solid rgba(225,232,240,.9)}
+    .nav{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:22px}
+    .brand{display:flex;align-items:center;gap:11px;font-weight:800;font-size:1.35rem;letter-spacing:-.7px;color:var(--navy)}
+    .brand-mark{width:42px;height:42px;display:grid;place-items:center;border-radius:13px;background:linear-gradient(135deg,var(--cyan),#1685ff);color:var(--navy);font-size:1.25rem;box-shadow:0 8px 20px #20d3f244}
+    .brand span span{color:#1685ff}
+    .navlinks{display:flex;align-items:center;gap:23px;list-style:none;font-size:.92rem;font-weight:600;color:#40546b}
+    .navlinks a:hover{color:#087fba}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border:0;border-radius:12px;padding:13px 18px;font-weight:700;cursor:pointer;transition:.2s transform,.2s box-shadow,.2s background}
+    .btn:hover{transform:translateY(-2px)}
+    .btn-primary{background:var(--green);color:#062b1b;box-shadow:0 9px 24px #20c87535}
+    .btn-primary:hover{background:#35df8c}
+    .btn-dark{background:var(--navy);color:#fff}
+    .btn-outline{border:1px solid #cbd8e6;color:var(--navy);background:#fff}
+    .menu-toggle{display:none;background:#edf4fb;color:var(--navy);border:0;border-radius:10px;width:44px;height:44px;font-size:1.4rem}
+    .hero{position:relative;overflow:hidden;background:radial-gradient(circle at 80% 15%,#1b79a955,transparent 28%),linear-gradient(120deg,#071729,#0b2b4d 62%,#0a4567);color:#fff;padding:88px 0 84px}
+    .hero:after{content:"";position:absolute;right:-90px;bottom:-180px;width:500px;height:500px;border:1px solid #20d3f233;border-radius:50%;box-shadow:0 0 0 50px #20d3f20b,0 0 0 100px #20d3f208}
+    .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:48px;position:relative;z-index:1}
+    .eyebrow{display:inline-flex;align-items:center;gap:8px;color:#7cecff;font-weight:700;font-size:.83rem;letter-spacing:.08em;text-transform:uppercase;margin-bottom:20px}
+    .eyebrow:before{content:"";width:26px;height:2px;background:var(--cyan)}
+    h1{font-size:clamp(2.45rem,5vw,4.4rem);line-height:1.07;letter-spacing:-2.5px;margin-bottom:22px}
+    h1 .accent{color:var(--cyan)}
+    .hero p{max-width:610px;color:#d3e2ef;font-size:1.07rem;margin-bottom:28px}
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+    .hero .btn-outline{background:#ffffff0c;border-color:#ffffff4a;color:#fff}
+    .trust-row{display:flex;gap:20px;flex-wrap:wrap;margin-top:32px;color:#d3e2ef;font-size:.9rem}
+    .trust-row span{display:flex;align-items:center;gap:7px}.check{color:var(--cyan);font-weight:900}
+    .hero-visual{position:relative;min-height:390px}
+    .hero-photo{position:absolute;inset:12px 8px 12px 24px;border-radius:26px;overflow:hidden;border:1px solid #ffffff33;box-shadow:0 25px 70px #0005}
+    .hero-photo img{width:100%;height:100%;object-fit:cover;filter:saturate(.9)}
+    .photo-overlay{position:absolute;inset:0;background:linear-gradient(180deg,#09233b00 35%,#071729d9)}
+    .visual-label{position:absolute;bottom:28px;left:28px;right:28px}
+    .visual-label strong{display:block;font-size:1.3rem}.visual-label span{color:#d4e6f5;font-size:.9rem}
+    .float-card{position:absolute;left:0;top:45px;background:#fff;color:var(--ink);padding:14px 17px;border-radius:15px;box-shadow:var(--shadow);display:flex;gap:12px;align-items:center}
+    .float-icon{width:43px;height:43px;border-radius:12px;display:grid;place-items:center;background:#e5faff;font-size:1.35rem}
+    .float-card small{display:block;color:var(--muted)}
+    .section{padding:88px 0}.section-soft{background:var(--paper)}
+    .section-head{text-align:center;max-width:720px;margin:0 auto 42px}
+    .kicker{font-size:.8rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#078dbb;margin-bottom:10px}
+    h2{font-size:clamp(1.9rem,3vw,2.7rem);line-height:1.18;letter-spacing:-1px;color:var(--navy);margin-bottom:14px}
+    .section-head p{color:var(--muted)}
+    .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .service-card{border:1px solid var(--line);border-radius:18px;padding:26px;background:#fff;box-shadow:0 7px 24px #0b1f3807;transition:.25s}
+    .service-card:hover{transform:translateY(-5px);box-shadow:var(--shadow);border-color:#b8eaf5}
+    .service-icon{width:56px;height:56px;border-radius:16px;display:grid;place-items:center;font-size:1.65rem;background:#e9faff;margin-bottom:20px}
+    .service-card h3{font-size:1.13rem;color:var(--navy);margin-bottom:9px}
+    .service-card p{color:var(--muted);font-size:.94rem;margin-bottom:15px}
+    .service-card ul{list-style:none;display:grid;gap:7px;color:#42566c;font-size:.9rem}
+    .service-card li:before{content:"✓";color:#079c73;font-weight:900;margin-right:8px}
+    .about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:55px;align-items:center}
+    .about-image{position:relative;min-height:420px;border-radius:24px;overflow:hidden;box-shadow:var(--shadow)}
+    .about-image img{width:100%;height:100%;min-height:420px;object-fit:cover}
+    .about-badge{position:absolute;left:20px;bottom:20px;background:#fff;border-radius:14px;padding:15px 18px;box-shadow:var(--shadow);font-weight:700;color:var(--navy)}
+    .about-copy p{color:var(--muted);margin:14px 0}
+    .about-list{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:24px 0}
+    .about-list div{padding:13px;border-radius:12px;background:var(--paper);font-weight:600;font-size:.9rem}
+    .about-list span{color:#078dbb;margin-right:7px}
+    .features-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+    .feature{padding:24px 18px;border-radius:16px;background:#fff;border:1px solid var(--line)}
+    .feature .service-icon{width:48px;height:48px;font-size:1.35rem;margin-bottom:15px}
+    .feature h3{font-size:1rem;color:var(--navy);margin-bottom:7px}
+    .feature p{font-size:.88rem;color:var(--muted)}
+    .gallery-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr;grid-template-rows:210px 210px;gap:16px}
+    .gallery-item{position:relative;overflow:hidden;border-radius:17px;background:#dce8f1}
+    .gallery-item:first-child{grid-row:span 2}
+    .gallery-item img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+    .gallery-item:hover img{transform:scale(1.05)}
+    .gallery-item:after{content:"";position:absolute;inset:35% 0 0;background:linear-gradient(transparent,#071729c9)}
+    .gallery-item span{position:absolute;z-index:1;left:18px;bottom:16px;color:#fff;font-weight:700}
+    .pricing-note{padding:24px;border-radius:18px;background:#eafaff;border:1px solid #c9f0fa;display:flex;align-items:center;justify-content:space-between;gap:22px}
+    .pricing-note h3{color:var(--navy);font-size:1.2rem;margin-bottom:5px}.pricing-note p{color:var(--muted);font-size:.93rem}
+    .contact-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:32px;align-items:start}
+    .contact-info{background:var(--navy);color:#fff;border-radius:20px;padding:30px}
+    .contact-info h3{font-size:1.5rem;margin-bottom:12px}.contact-info>p{color:#c7d7e7;margin-bottom:24px}
+    .contact-line{display:flex;gap:13px;margin:19px 0;align-items:flex-start}.contact-line b{display:block}.contact-line small{color:#c7d7e7}
+    .contact-line .service-icon{flex-shrink:0;width:42px;height:42px;margin:0;font-size:1.1rem}
+    .contact-form{border:1px solid var(--line);border-radius:20px;padding:30px;box-shadow:0 8px 30px #0b1f3808}
+    .contact-form h3{color:var(--navy);font-size:1.35rem;margin-bottom:6px}.contact-form>p{color:var(--muted);margin-bottom:22px;font-size:.92rem}
+    .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .field{display:grid;gap:7px;margin-bottom:15px}.field.full{grid-column:1/-1}
+    label{font-size:.88rem;font-weight:700;color:#31465d}
+    input,select,textarea{width:100%;border:1px solid #cfdae6;border-radius:10px;padding:12px 13px;color:var(--ink);background:#fff;outline:none}
+    input:focus,select:focus,textarea:focus{border-color:#159fca;box-shadow:0 0 0 3px #20d3f222}
+    textarea{min-height:120px;resize:vertical}
+    .contact-form .btn{width:100%}.form-hint{font-size:.78rem;color:var(--muted);margin-top:12px}
+    footer{background:#071729;color:#d6e2ee;padding:48px 0 20px}
+    .footer-grid{display:grid;grid-template-columns:1.3fr .8fr .9fr;gap:36px;padding-bottom:34px}
+    .footer-brand{color:#fff;margin-bottom:14px}.footer-grid p,.footer-grid li{color:#aebfd0;font-size:.9rem}
+    .footer-grid h4{color:#fff;margin-bottom:14px}.footer-grid ul{list-style:none;display:grid;gap:8px}
+    .footer-bottom{border-top:1px solid #ffffff1c;padding-top:18px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:.82rem;color:#91a5b9}
+    .floating-wa{position:fixed;z-index:30;right:22px;bottom:22px;width:60px;height:60px;border-radius:50%;display:grid;place-items:center;background:#20c875;color:#062b1b;font-size:1.8rem;box-shadow:0 10px 30px #052f1b44;border:3px solid #fff;transition:.2s}
+    .floating-wa:hover{transform:scale(1.07)}
+    @media(max-width:950px){.navlinks{gap:13px;font-size:.85rem}.nav-cta{display:none}.hero-grid{gap:24px}.services-grid{grid-template-columns:repeat(2,1fr)}.features-grid{grid-template-columns:repeat(2,1fr)}.about-grid{gap:30px}.footer-grid{grid-template-columns:1fr 1fr}.footer-grid>div:first-child{grid-column:1/-1}}
+    @media(max-width:720px){.container{width:min(100% - 30px,1160px)}.topbar .container{justify-content:center;text-align:center}.nav{min-height:68px}.menu-toggle{display:block}.navlinks{display:none;position:absolute;left:15px;right:15px;top:68px;background:#fff;border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);padding:18px;align-items:stretch;flex-direction:column;gap:14px}.navlinks.open{display:flex}.hero{padding:60px 0 55px}.hero-grid{grid-template-columns:1fr}.hero-visual{min-height:310px}.hero-photo{inset:10px 0}.float-card{left:-4px;top:25px}.section{padding:64px 0}.services-grid{grid-template-columns:1fr}.about-grid,.contact-grid{grid-template-columns:1fr}.about-image,.about-image img{min-height:300px}.gallery-grid{grid-template-columns:1fr 1fr;grid-template-rows:190px 150px 150px}.gallery-item:first-child{grid-row:span 2}.pricing-note{align-items:flex-start;flex-direction:column}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.footer-grid{grid-template-columns:1fr}.footer-grid>div:first-child{grid-column:auto}.hero h1{letter-spacing:-1.4px}.about-list{grid-template-columns:1fr 1fr}}
+    @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+  </style>
+</head>
+<body>
+  <div class="topbar"><div class="container"><span>📍 Angsana, Tanah Bumbu, Kalimantan Selatan</span><span>Jaringan • Starlink • CCTV • MikroTik • RT/RW Net</span></div></div>
+  <header>
+    <nav class="nav container" aria-label="Navigasi utama">
+      <a class="brand" href="#beranda" aria-label="NetHafsahu beranda"><span class="brand-mark">⌁</span><span>Net<span>Hafsahu</span></span></a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Buka menu" aria-expanded="false">☰</button>
+      <ul class="navlinks" id="navlinks">
+        <li><a href="#beranda">Beranda</a></li><li><a href="#layanan">Layanan</a></li><li><a href="#tentang">Tentang Kami</a></li><li><a href="#keunggulan">Keunggulan</a></li><li><a href="#galeri">Galeri</a></li><li><a href="#kontak">Kontak</a></li>
+      </ul>
+      <a class="btn btn-primary nav-cta" href="https://wa.me/6285111333778?text=Halo%20NetHafsahu%2C%20saya%20ingin%20konsultasi." target="_blank" rel="noopener">☏ Konsultasi</a>
+    </nav>
+  </header>
+  <main>
+    <section class="hero" id="beranda">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">Solusi Teknologi & Konektivitas</div>
+          <h1>Jaringan Andal untuk <span class="accent">Rumah, Usaha,</span> dan RT/RW Net.</h1>
+          <p>NetHafsahu membantu pemasangan dan penataan jaringan internet, Starlink, CCTV, konfigurasi MikroTik, serta instalasi kabel LAN dan fiber optik dengan pengerjaan yang rapi dan sesuai kebutuhan.</p>
+          <div class="hero-actions"><a class="btn btn-primary" href="https://wa.me/6285111333778?text=Halo%20NetHafsahu%2C%20saya%20ingin%20konsultasi%20layanan." target="_blank" rel="noopener">☏ Konsultasi via WhatsApp</a><a class="btn btn-outline" href="#layanan">Lihat Layanan ↓</a></div>
+          <div class="trust-row"><span><b class="check">✓</b> Konsultasi kebutuhan</span><span><b class="check">✓</b> Solusi sesuai lokasi</span><span><b class="check">✓</b> Dukungan purnajual</span></div>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-photo"><img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1100&q=85" alt="Perangkat dan komponen teknologi jaringan" fetchpriority="high"><div class="photo-overlay"></div><div class="visual-label"><strong>Terhubung dengan lebih baik</strong><span>Solusi jaringan untuk kebutuhan Anda</span></div></div>
+          <div class="float-card"><div class="float-icon">⌘</div><div><strong>Solusi jaringan</strong><small>Rumah • Usaha • RT/RW Net</small></div></div>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="layanan">
+      <div class="container"><div class="section-head"><div class="kicker">Layanan Kami</div><h2>Solusi lengkap untuk kebutuhan jaringan Anda</h2><p>Dari instalasi dasar sampai konfigurasi jaringan yang lebih terkelola, pilih layanan sesuai kebutuhan lokasi dan anggaran.</p></div>
+        <div class="services-grid">
+          <article class="service-card"><div class="service-icon">📶</div><h3>Pemasangan Jaringan Internet</h3><p>Instalasi dan penataan jaringan untuk rumah, kantor, toko, dan tempat usaha.</p><ul><li>Pemasangan access point dan router</li><li>Penarikan kabel LAN</li><li>Perluasan jangkauan WiFi</li><li>Pemeriksaan gangguan jaringan</li></ul></article>
+          <article class="service-card"><div class="service-icon">🛰️</div><h3>Instalasi Starlink</h3><p>Pemasangan perangkat internet satelit untuk lokasi yang membutuhkan koneksi alternatif.</p><ul><li>Penempatan antena dan perangkat</li><li>Pemasangan dudukan sesuai lokasi</li><li>Konfigurasi router dan WiFi</li><li>Uji koneksi setelah pemasangan</li></ul></article>
+          <article class="service-card"><div class="service-icon">📹</div><h3>Instalasi CCTV</h3><p>Pemasangan sistem pemantauan untuk rumah, toko, kantor, dan area usaha.</p><ul><li>Pemasangan kamera</li><li>Pengaturan rekaman sesuai perangkat</li><li>Akses pemantauan melalui HP</li><li>Pemeriksaan dan perawatan</li></ul></article>
+          <article class="service-card"><div class="service-icon">⚙️</div><h3>Setting MikroTik</h3><p>Konfigurasi router untuk pengelolaan koneksi dan pembagian akses jaringan.</p><ul><li>Konfigurasi dasar dan firewall</li><li>Manajemen bandwidth</li><li>PPPoE dan hotspot</li><li>Multi-WAN sesuai kebutuhan</li></ul></article>
+          <article class="service-card"><div class="service-icon">🌐</div><h3>Pembangunan RT/RW Net</h3><p>Pendampingan pembangunan jaringan lingkungan dan pengelolaan pelanggan.</p><ul><li>Perencanaan topologi jaringan</li><li>Pengaturan router dan access point</li><li>Manajemen pelanggan</li><li>Pemeliharaan jaringan</li></ul></article>
+          <article class="service-card"><div class="service-icon">🔌</div><h3>Kabel LAN & Fiber Optik</h3><p>Penarikan dan penataan kabel untuk kebutuhan koneksi antarperangkat atau titik jaringan.</p><ul><li>Penarikan dan terminasi kabel</li><li>Penyambungan fiber optik sesuai kebutuhan</li><li>Pemeriksaan jalur kabel</li><li>Perapian instalasi</li></ul></article>
+        </div>
+      </div>
+    </section>
+    <section class="section section-soft" id="tentang">
+      <div class="container about-grid">
+        <div class="about-image"><img src="https://images.unsplash.com/photo-1581092921461-eab62e97a780?auto=format&fit=crop&w=1000&q=85" alt="Teknisi sedang menangani pekerjaan teknis" loading="lazy"><div class="about-badge">NetHafsahu · Solusi jaringan</div></div>
+        <div class="about-copy"><div class="kicker">Tentang NetHafsahu</div><h2>Membantu jaringan Anda tertata dan berfungsi sesuai kebutuhan</h2><p>NetHafsahu menyediakan jasa instalasi dan dukungan teknis jaringan untuk pelanggan rumah tangga, UMKM, kantor, serta pengelola RT/RW Net.</p><p>Kami mengutamakan konsultasi kebutuhan, pemilihan solusi yang sesuai kondisi lokasi, kerapian pemasangan, dan penjelasan konfigurasi setelah pekerjaan selesai.</p>
+          <div class="about-list"><div><span>✓</span> Pengerjaan rapi</div><div><span>✓</span> Solusi sesuai kebutuhan</div><div><span>✓</span> Konsultasi teknis</div><div><span>✓</span> Dukungan purnajual</div></div>
+          <a class="btn btn-dark" href="https://wa.me/6285111333778?text=Halo%20NetHafsahu%2C%20saya%20ingin%20menanyakan%20layanan." target="_blank" rel="noopener">Diskusikan kebutuhan Anda ↗</a>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="keunggulan">
+      <div class="container"><div class="section-head"><div class="kicker">Mengapa NetHafsahu?</div><h2>Pelayanan yang jelas dari awal hingga selesai</h2><p>Kami berusaha memberi pengalaman kerja yang nyaman melalui komunikasi yang jelas dan solusi teknis yang tepat.</p></div>
+        <div class="features-grid">
+          <article class="feature"><div class="service-icon">🧭</div><h3>Konsultasi Kebutuhan</h3><p>Membahas kondisi lokasi dan kebutuhan sebelum menentukan pekerjaan.</p></article>
+          <article class="feature"><div class="service-icon">🧰</div><h3>Instalasi Terencana</h3><p>Penempatan perangkat dan jalur kabel direncanakan dengan memperhatikan kerapian.</p></article>
+          <article class="feature"><div class="service-icon">🧾</div><h3>Biaya Transparan</h3><p>Ruang lingkup dan estimasi biaya dibicarakan sebelum pekerjaan dimulai.</p></article>
+          <article class="feature"><div class="service-icon">🤝</div><h3>Dukungan Purnajual</h3><p>Tersedia konsultasi lanjutan sesuai kesepakatan layanan.</p></article>
+        </div>
+      </div>
+    </section>
+    <section class="section section-soft" id="galeri">
+      <div class="container"><div class="section-head"><div class="kicker">Galeri Pekerjaan</div><h2>Teknologi untuk berbagai kebutuhan</h2><p>Contoh visual perangkat dan pekerjaan yang berkaitan dengan layanan NetHafsahu.</p></div>
+        <div class="gallery-grid">
+          <div class="gallery-item"><img src="https://images.unsplash.com/photo-1551703599-6b3e8379aa8b?auto=format&fit=crop&w=1000&q=80" alt="Perangkat jaringan komputer" loading="lazy"><span>Jaringan & perangkat</span></div>
+          <div class="gallery-item"><img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=80" alt="Kamera pengawas" loading="lazy"><span>Sistem CCTV</span></div>
+          <div class="gallery-item"><img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80" alt="Komponen elektronik dan jaringan" loading="lazy"><span>Perangkat teknologi</span></div>
+          <div class="gallery-item"><img src="https://images.unsplash.com/photo-1516321310757-7e6d7c5c4f7c?auto=format&fit=crop&w=800&q=80" alt="Perangkat kerja digital" loading="lazy"><span>Teknologi & konektivitas</span></div>
+          <div class="gallery-item"><img src="https://images.unsplash.com/photo-1581092921461-eab62e97a780?auto=format&fit=crop&w=800&q=80" alt="Pekerjaan teknis" loading="lazy"><span>Pekerjaan teknis</span></div>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="harga">
+      <div class="container"><div class="pricing-note"><div><h3>Harga menyesuaikan kebutuhan lokasi</h3><p>Biaya bergantung pada jenis perangkat, panjang jalur kabel, tingkat kesulitan, dan lingkup pekerjaan. Hubungi kami untuk konsultasi atau permintaan survei.</p></div><a class="btn btn-primary" href="https://wa.me/6285111333778?text=Halo%20NetHafsahu%2C%20saya%20ingin%20meminta%20estimasi%20biaya." target="_blank" rel="noopener">Minta Estimasi Biaya ↗</a></div></div>
+    </section>
+    <section class="section section-soft" id="kontak">
+      <div class="container"><div class="section-head"><div class="kicker">Hubungi Kami</div><h2>Ceritakan kebutuhan jaringan Anda</h2><p>Isi formulir berikut. Pesan akan disiapkan dan dibuka melalui WhatsApp untuk Anda kirim.</p></div>
+        <div class="contact-grid">
+          <div class="contact-info"><h3>Mari berdiskusi</h3><p>Hubungi NetHafsahu untuk konsultasi layanan jaringan internet, Starlink, CCTV, MikroTik, RT/RW Net, dan kabel jaringan.</p>
+            <div class="contact-line"><div class="service-icon">📍</div><div><b>Wilayah layanan</b><small>Angsana, Tanah Bumbu, Kalimantan Selatan dan area sekitar sesuai jangkauan.</small></div></div>
+            <div class="contact-line"><div class="service-icon">☏</div><div><b>WhatsApp</b><small>0851-1133-3778</small></div></div>
+            <div class="contact-line"><div class="service-icon">🕒</div><div><b>Jam layanan</b><small>Atur jadwal konsultasi dan survei melalui WhatsApp.</small></div></div>
+            <a class="btn btn-primary" style="width:100%;margin-top:12px" href="https://wa.me/6285111333778?text=Halo%20NetHafsahu%2C%20saya%20ingin%20konsultasi." target="_blank" rel="noopener">Buka WhatsApp ↗</a>
+          </div>
+          <form class="contact-form" id="contactForm"><h3>Formulir konsultasi</h3><p>Lengkapi informasi dasar agar kami memahami kebutuhan Anda.</p>
+            <div class="form-grid">
+              <div class="field"><label for="name">Nama</label><input id="name" name="name" placeholder="Nama Anda" required></div>
+              <div class="field"><label for="phone">Nomor telepon</label><input id="phone" name="phone" inputmode="tel" placeholder="Nomor yang bisa dihubungi" required></div>
+              <div class="field full"><label for="service">Layanan yang dibutuhkan</label><select id="service" name="service" required><option value="">Pilih layanan</option><option>Pemasangan jaringan internet / WiFi</option><option>Instalasi Starlink</option><option>Instalasi CCTV</option><option>Setting MikroTik</option><option>Pembangunan RT/RW Net</option><option>Kabel LAN / Fiber Optik</option><option>Perbaikan gangguan jaringan</option><option>Lainnya</option></select></div>
+              <div class="field full"><label for="location">Lokasi pekerjaan</label><input id="location" name="location" placeholder="Contoh: Angsana, Tanah Bumbu" required></div>
+              <div class="field full"><label for="message">Detail kebutuhan</label><textarea id="message" name="message" placeholder="Ceritakan kebutuhan atau kendala jaringan Anda..."></textarea></div>
+            </div>
+            <button class="btn btn-primary" type="submit">Kirim konsultasi ke WhatsApp ↗</button><p class="form-hint">Formulir ini tidak menyimpan data. Pesan dibuka di WhatsApp agar Anda dapat memeriksa dan mengirimkannya.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer><div class="container"><div class="footer-grid">
+    <div><a class="brand footer-brand" href="#beranda"><span class="brand-mark">⌁</span><span>Net<span>Hafsahu</span></span></a><p>Solusi Jaringan Internet dan Keamanan untuk Rumah, Usaha, dan RT/RW Net.</p></div>
+    <div><h4>Navigasi</h4><ul><li><a href="#layanan">Layanan</a></li><li><a href="#tentang">Tentang Kami</a></li><li><a href="#keunggulan">Keunggulan</a></li><li><a href="#galeri">Galeri</a></li></ul></div>
+    <div><h4>Layanan</h4><ul><li>Jaringan Internet & WiFi</li><li>Starlink & CCTV</li><li>Setting MikroTik</li><li>RT/RW Net & Fiber Optik</li></ul></div>
+  </div><div class="footer-bottom"><span>© <span id="year"></span> NetHafsahu. Hak cipta dilindungi.</span><span>Angsana · Tanah Bumbu · Kalimantan Selatan</span></div></div></footer>
+  <a class="floating-wa" href="https://wa.me/6285111333778?text=Halo%20NetHafsahu%2C%20saya%20ingin%20konsultasi." target="_blank" rel="noopener" aria-label="Chat NetHafsahu melalui WhatsApp">☏</a>
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const navlinks = document.getElementById('navlinks');
+    menuToggle.addEventListener('click', () => {
+      const open = navlinks.classList.toggle('open');
+      menuToggle.setAttribute('aria-expanded', String(open));
+      menuToggle.textContent = open ? '✕' : '☰';
+    });
+    navlinks.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+      navlinks.classList.remove('open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+      menuToggle.textContent = '☰';
+    }));
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('contactForm').addEventListener('submit', event => {
+      event.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const service = document.getElementById('service').value;
+      const location = document.getElementById('location').value.trim();
+      const message = document.getElementById('message').value.trim();
+      const text = `Halo NetHafsahu, saya ingin konsultasi.%0A%0ANama: ${encodeURIComponent(name)}%0ANomor telepon: ${encodeURIComponent(phone)}%0ALayanan: ${encodeURIComponent(service)}%0ALokasi: ${encodeURIComponent(location)}%0ADetail: ${encodeURIComponent(message || '-')}`;
+      window.open(`https://wa.me/6285111333778?text=${text}`, '_blank', 'noopener');
+    });
+  </script>
+</body>
+</html>
